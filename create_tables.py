@@ -29,7 +29,7 @@ def create_database():
 
 def drop_tables(cur, conn):
     """
-    Drops each table using the queries in `drop_table_queries` list.
+    Drops tables.
     @param cur:
     @param conn:
     """
@@ -40,7 +40,7 @@ def drop_tables(cur, conn):
 
 def create_tables(cur, conn):
     """
-    Creates each table using the queries in `create_table_queries` list.
+    Creates tables.
     @param cur:
     @param conn:
     """
@@ -50,18 +50,6 @@ def create_tables(cur, conn):
 
 
 def main():
-    """
-    - Drops (if exists) and Creates the sparkify database. 
-    
-    - Establishes connection with the sparkify database and gets
-    cursor to it.  
-    
-    - Drops all the tables.  
-    
-    - Creates all tables needed. 
-    
-    - Finally, closes the connection. 
-    """
     cur, conn = create_database()
     
     drop_tables(cur, conn)
